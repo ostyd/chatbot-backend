@@ -1,3 +1,4 @@
+const getAccessToken = require('./getAccessToken');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -23,4 +24,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server ${PORT} portunda çalışıyor 🚀`);
 });
-const getAccessToken = require('./getAccessToken');
+
