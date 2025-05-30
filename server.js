@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 // Server başlat
 const PORT = process.env.PORT || 3000;
+getAccessToken().then(token => console.log("TOKEN:", token)).catch(err => console.error("TOKEN HATASI:", err));
 app.listen(PORT, () => {
   console.log(`Server ${PORT} portunda çalışıyor 🚀`);
 });
