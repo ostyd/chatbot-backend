@@ -26,6 +26,8 @@ app.post('/api/getFlightSuggestions', (req, res) => {
 
   res.json({ reply });
 });
+const flightRouter = require('./getFlightSuggestions');
+app.use('/api', flightRouter);
 
 app.listen(PORT, () => {
   console.log(`API çalışıyor: http://localhost:${PORT}`);
